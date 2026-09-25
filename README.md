@@ -50,8 +50,8 @@ Inspirado en principios de diseño minimalista (Apple-style) con la identidad de
 
 ## Contacto
 
-- Web: [kalimasgroup.net](https://kalimasgroup.net)
-- Email: hola@kalimasgroup.net
+- Web: `your-domain.example`
+- Email: `contact@your-domain.example`
 
 ---
 
