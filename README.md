@@ -11,47 +11,58 @@ Sitio web corporativo para Kalimas Group, grupo tecnológico que diseña platafo
 ## Stack
 
 - HTML5 semántico
-- CSS3 con variables y diseño responsive
-- JavaScript vanilla (sin dependencias)
-- Google Fonts (Inter)
+- CSS3 con design tokens, tipografía Syne + DM Sans
+- JavaScript vanilla (navegación, animaciones, formulario)
+- Formspree para envío del formulario de contacto
 
 ## Estructura
 
 ```
 KalimasWeb/
-├── index.html      # Markup principal
-├── styles.css      # Estilos y design system
-├── main.js         # Interactividad (nav, animaciones, form)
+├── index.html
+├── styles.css
+├── main.js
+├── favicon.svg
+├── productos/
+│   ├── kalirio.html
+│   ├── kalenda.html
+│   └── kalima-suite.html
 └── README.md
 ```
 
 ## Desarrollo local
 
-Abre `index.html` directamente en el navegador o usa un servidor local:
+Abre `index.html` en el navegador o usa un servidor local:
 
 ```bash
-# Con Python
-python3 -m http.server 8000
+# Python
+python -m http.server 8000
 
-# Con Node
+# Node
 npx serve
 ```
 
-Luego visita `http://localhost:8000`.
+Visita `http://localhost:8000`.
+
+## Formulario de contacto (Formspree)
+
+1. Crea una cuenta en [formspree.io](https://formspree.io) y un nuevo formulario.
+2. Copia el endpoint (`https://formspree.io/f/xxxxxxxx`).
+3. En `index.html`, sustituye `YOUR_FORM_ID` en el atributo `action` del formulario `#contactForm`.
+
+Hasta que configures el ID, el formulario valida en el cliente y muestra un mensaje de éxito de desarrollo (no envía correo).
 
 ## Diseño
 
-Inspirado en principios de diseño minimalista (Apple-style) con la identidad de marca Kalimas:
-
-- Paleta: Blanco / Negro / Verde marca (#00c853)
-- Tipografía: Inter (300–900)
-- Layout: Espacioso, jerarquía visual clara
-- Animaciones: Scroll reveal, hover sutiles
+- Paleta: verde marca `#00c853` / negro `#0a0f0c` / superficies claras
+- Tipografía: Syne (display) + DM Sans (cuerpo)
+- Hero full-bleed con marca como señal principal
+- Motion: scroll reveal, atmósfera del hero, mockups sutiles (`prefers-reduced-motion` respetado)
 
 ## Contacto
 
-- Web: `your-domain.example`
-- Email: `contact@your-domain.example`
+- Web: [kalimasgroup.net](https://kalimasgroup.net)
+- Email: [hola@kalimasgroup.net](mailto:hola@kalimasgroup.net)
 
 ---
 

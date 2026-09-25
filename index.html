@@ -4,496 +4,453 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalimas Group — Grupo Tecnológico</title>
-    <meta name="description" content="Construimos el software que mueve a las empresas del mañana. Plataformas tecnológicas para equipos, agendamiento y gestión empresarial.">
+    <meta name="description" content="Construimos el software que mueve a las empresas del mañana. Plataformas tecnológicas para eventos, agendamiento y gestión empresarial.">
+    <meta name="theme-color" content="#00c853">
+    <link rel="canonical" href="https://kalimasgroup.net/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kalimasgroup.net/">
+    <meta property="og:title" content="Kalimas Group — Grupo Tecnológico">
+    <meta property="og:description" content="Construimos el software que mueve a las empresas del mañana. Kalirio, Kalenda y Kalima Suite.">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Kalimas Group">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kalimas Group — Grupo Tecnológico">
+    <meta name="twitter:description" content="Plataformas tecnológicas para eventos, agendamiento y gestión empresarial.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <svg class="nav-logo-svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-                    <path d="M8 28V8h4l8 10 8-10h4v20h-4V14l-8 10-8-10v14H8z" fill="none"/>
-                    <path d="M10 8v20l8-12 8 12V8" stroke="#00c853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-                    <line x1="26" y1="6" x2="18" y2="32" stroke="#00c853" stroke-width="1.5" opacity="0.6"/>
-                </svg>
-                <span class="logo-text">KALIMAS GROUP</span>
-            </a>
-            <ul class="nav-links">
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header>
+        <nav class="nav" id="nav" aria-label="Principal">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo" aria-label="Kalimas Group — Inicio">
+                    <svg class="nav-logo-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                        <path d="M10 8v20l8-12 8 12V8" stroke="#00c853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="26" y1="6" x2="18" y2="32" stroke="#00c853" stroke-width="1.5" opacity="0.6"/>
+                    </svg>
+                    <span class="logo-text">KALIMAS GROUP</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#soluciones">Soluciones</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <a href="#contacto" class="nav-cta">Hablemos</a>
+                <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="mobile-menu" id="mobileMenu" hidden>
+            <ul class="mobile-menu-links">
                 <li><a href="#productos">Productos</a></li>
                 <li><a href="#soluciones">Soluciones</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <a href="#contacto" class="nav-cta">Hablemos</a>
-            <button class="nav-toggle" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-            </button>
+            <a href="#contacto" class="btn btn-primary mobile-menu-cta">Hablemos</a>
         </div>
-    </nav>
+    </header>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul class="mobile-menu-links">
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#soluciones">Soluciones</a></li>
-            <li><a href="#nosotros">Nosotros</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <p class="hero-tag">Building Tomorrow, Together</p>
-            <h1 class="hero-title">
-                Construimos el software<br>
-                <span class="hero-gradient">que mueve empresas.</span>
-            </h1>
-            <p class="hero-subtitle">
-                Diseñamos plataformas que resuelven problemas reales: coordinar equipos, 
-                agendar sin fricción y gestionar relaciones con clientes. Una familia de productos, 
-                una misma exigencia de excelencia.
-            </p>
-            <div class="hero-actions">
-                <a href="#productos" class="btn btn-primary">Explorar productos</a>
-                <a href="#contacto" class="btn btn-secondary">Solicitar demo</a>
+    <main id="main">
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="hero-atmosphere" aria-hidden="true"></div>
+            <div class="hero-visual-plane" aria-hidden="true">
+                <div class="hero-orb hero-orb-1"></div>
+                <div class="hero-orb hero-orb-2"></div>
+                <div class="hero-grid-lines"></div>
             </div>
-        </div>
-        <div class="hero-visual">
-            <div class="hero-grid">
-                <div class="hero-card card-kalirio">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <circle cx="20" cy="20" r="18" stroke="#00c853" stroke-width="2"/>
-                        <path d="M14 12v16l6-8 6 8V12" stroke="#00c853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <div class="hero-content">
+                <p class="hero-brand">
+                    <svg width="40" height="40" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                        <path d="M10 8v20l8-12 8 12V8" stroke="#00c853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <line x1="26" y1="6" x2="18" y2="32" stroke="#00c853" stroke-width="1.5" opacity="0.6"/>
                     </svg>
-                    <span class="card-label">Kalirio</span>
-                    <span class="card-sublabel">Eventos</span>
-                </div>
-                <div class="hero-card card-kalenda">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <circle cx="20" cy="20" r="18" stroke="#00c853" stroke-width="2"/>
-                        <path d="M14 12v16l6-8 6 8V12" stroke="#00c853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M26 8 a14 14 0 0 1 0 24" stroke="#00c853" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
-                    </svg>
-                    <span class="card-label">Kalenda</span>
-                    <span class="card-sublabel">Agendamiento</span>
-                </div>
-                <div class="hero-card card-suite">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                        <rect x="4" y="4" width="32" height="32" rx="8" stroke="#00c853" stroke-width="2"/>
-                        <path d="M14 12v16l6-8 6 8V12" stroke="#00c853" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span class="card-label">Kalima Suite</span>
-                    <span class="card-sublabel">CRM + Módulos</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="section section-dark" id="productos">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Nuestros Productos</p>
-                <h2 class="section-title">Tres plataformas.<br>Un ecosistema.</h2>
-                <p class="section-desc">
-                    Productos independientes, diseñados para resolver retos específicos 
-                    y pensados para integrarse entre sí dentro del ecosistema Kalimas.
+                    KALIMAS GROUP
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kalirio Product -->
-    <section class="product-section" id="kalirio">
-        <div class="container">
-            <div class="product-layout">
-                <div class="product-info">
-                    <div class="product-badge">Eventos & Operaciones</div>
-                    <h3 class="product-name">
-                        <span class="product-name-prefix">kali</span><span class="product-name-accent">rio</span>
-                    </h3>
-                    <p class="product-tagline">Plataforma integral para la gestión y operación de eventos de cualquier escala.</p>
-                    <p class="product-description">
-                        Desde la coordinación de staff hasta el seguimiento en tiempo real, 
-                        Kalirio unifica todas las operaciones de tu evento en una sola plataforma. 
-                        Tickets, asistentes, experiencias, analytics y operación — todo conectado.
-                    </p>
-                    <ul class="product-features">
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Tickets y control de accesos</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Gestión de asistentes en tiempo real</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Experiencias y activaciones</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Analytics y reportes de operación</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Coordinación de staff multi-sede</span>
-                        </li>
-                    </ul>
-                    <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
-                </div>
-                <div class="product-visual">
-                    <div class="product-mockup mockup-kalirio">
-                        <div class="mockup-header">
-                            <div class="mockup-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <span class="mockup-title">Kalirio Dashboard</span>
-                        </div>
-                        <div class="mockup-body">
-                            <div class="mockup-sidebar">
-                                <div class="mockup-nav-item active"></div>
-                                <div class="mockup-nav-item"></div>
-                                <div class="mockup-nav-item"></div>
-                                <div class="mockup-nav-item"></div>
-                            </div>
-                            <div class="mockup-content">
-                                <div class="mockup-stat-row">
-                                    <div class="mockup-stat">
-                                        <span class="stat-number">2,450</span>
-                                        <span class="stat-label">Asistentes</span>
-                                    </div>
-                                    <div class="mockup-stat">
-                                        <span class="stat-number">98%</span>
-                                        <span class="stat-label">Check-in</span>
-                                    </div>
-                                    <div class="mockup-stat">
-                                        <span class="stat-number">124</span>
-                                        <span class="stat-label">Staff</span>
-                                    </div>
-                                </div>
-                                <div class="mockup-chart"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kalenda Product -->
-    <section class="product-section product-alt" id="kalenda">
-        <div class="container">
-            <div class="product-layout product-layout-reverse">
-                <div class="product-info">
-                    <div class="product-badge badge-kalenda">Agendamiento de Citas</div>
-                    <h3 class="product-name">
-                        <span class="product-name-prefix">kalen</span><span class="product-name-accent">da</span>
-                    </h3>
-                    <p class="product-tagline">Plataforma inteligente para agendar, automatizar y gestionar citas y reservas.</p>
-                    <p class="product-description">
-                        Automatiza tu proceso de agendamiento con una herramienta que se adapta 
-                        a tu negocio. Integrada dentro de Kalima Suite, funciona como producto 
-                        independiente o como módulo del ecosistema completo.
-                    </p>
-                    <ul class="product-features">
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Agenda inteligente con disponibilidad en tiempo real</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Recordatorios automáticos multicanal</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Gestión de clientes y perfiles</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Confirmaciones automáticas</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">→</span>
-                            <span>Reportes y métricas de citas</span>
-                        </li>
-                    </ul>
-                    <a href="#contacto" class="btn btn-primary">Solicitar demo</a>
-                </div>
-                <div class="product-visual">
-                    <div class="product-mockup mockup-kalenda">
-                        <div class="mockup-header header-kalenda">
-                            <div class="mockup-dots">
-                                <span></span><span></span><span></span>
-                            </div>
-                            <span class="mockup-title">Kalenda</span>
-                        </div>
-                        <div class="mockup-body">
-                            <div class="mockup-calendar">
-                                <div class="cal-header">
-                                    <span>Junio 2026</span>
-                                </div>
-                                <div class="cal-grid">
-                                    <div class="cal-day">L</div>
-                                    <div class="cal-day">M</div>
-                                    <div class="cal-day">M</div>
-                                    <div class="cal-day">J</div>
-                                    <div class="cal-day">V</div>
-                                    <div class="cal-num">1</div>
-                                    <div class="cal-num">2</div>
-                                    <div class="cal-num">3</div>
-                                    <div class="cal-num active">4</div>
-                                    <div class="cal-num">5</div>
-                                    <div class="cal-num">8</div>
-                                    <div class="cal-num">9</div>
-                                    <div class="cal-num highlight">10</div>
-                                    <div class="cal-num">11</div>
-                                    <div class="cal-num">12</div>
-                                </div>
-                                <div class="cal-events">
-                                    <div class="cal-event">
-                                        <span class="event-time">09:00</span>
-                                        <span class="event-name">Consulta — María L.</span>
-                                    </div>
-                                    <div class="cal-event event-confirmed">
-                                        <span class="event-time">11:30</span>
-                                        <span class="event-name">Demo — Empresa XYZ</span>
-                                    </div>
-                                    <div class="cal-event">
-                                        <span class="event-time">15:00</span>
-                                        <span class="event-name">Seguimiento — Carlos R.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kalima Suite Product -->
-    <section class="product-section section-dark" id="kalima-suite">
-        <div class="container">
-            <div class="product-layout">
-                <div class="product-info">
-                    <div class="product-badge badge-suite">Suite Empresarial</div>
-                    <h3 class="product-name">Kalima Suite</h3>
-                    <p class="product-tagline">Todo tu negocio. Una sola plataforma.</p>
-                    <p class="product-description">
-                        La suite completa que integra todos nuestros módulos: Kalenda para 
-                        agendamiento inteligente, un CRM completo para gestionar relaciones 
-                        con clientes, analytics para decisiones informadas y un ecosistema 
-                        de integraciones. Una solución unificada para empresas que buscan 
-                        eficiencia operativa.
-                    </p>
-                    <div class="suite-modules">
-                        <div class="module-card">
-                            <div class="module-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#00c853" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="#00c853" stroke-width="1.5"/><line x1="9" y1="9" x2="9" y2="20" stroke="#00c853" stroke-width="1.5"/></svg>
-                            </div>
-                            <h4>Kalenda</h4>
-                            <p>Agendamiento y reservas inteligentes</p>
-                        </div>
-                        <div class="module-card">
-                            <div class="module-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="3" stroke="#00c853" stroke-width="1.5"/><circle cx="17" cy="7" r="3" stroke="#00c853" stroke-width="1.5"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="#00c853" stroke-width="1.5"/></svg>
-                            </div>
-                            <h4>CRM</h4>
-                            <p>Gestión de relaciones y pipeline de ventas</p>
-                        </div>
-                        <div class="module-card">
-                            <div class="module-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 20V10l4-6h8l4 6v10" stroke="#00c853" stroke-width="1.5"/><rect x="4" y="14" width="4" height="6" stroke="#00c853" stroke-width="1.5"/><rect x="10" y="10" width="4" height="10" stroke="#00c853" stroke-width="1.5"/><rect x="16" y="6" width="4" height="14" stroke="#00c853" stroke-width="1.5"/></svg>
-                            </div>
-                            <h4>Analytics</h4>
-                            <p>Métricas y reportes de negocio</p>
-                        </div>
-                        <div class="module-card">
-                            <div class="module-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="12" r="3" stroke="#00c853" stroke-width="1.5"/><circle cx="18" cy="6" r="3" stroke="#00c853" stroke-width="1.5"/><circle cx="18" cy="18" r="3" stroke="#00c853" stroke-width="1.5"/><line x1="9" y1="11" x2="15" y2="7" stroke="#00c853" stroke-width="1.5"/><line x1="9" y1="13" x2="15" y2="17" stroke="#00c853" stroke-width="1.5"/></svg>
-                            </div>
-                            <h4>Integraciones</h4>
-                            <p>Conecta tus herramientas favoritas</p>
-                        </div>
-                    </div>
-                    <a href="#contacto" class="btn btn-primary">Explorar la suite</a>
-                </div>
-                <div class="product-visual">
-                    <div class="suite-visual">
-                        <div class="suite-ring ring-outer"></div>
-                        <div class="suite-ring ring-inner"></div>
-                        <div class="suite-center">
-                            <span class="suite-logo">K</span>
-                            <span class="suite-label">Suite</span>
-                        </div>
-                        <div class="suite-node node-1">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#00c853" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="#00c853" stroke-width="1.5"/></svg>
-                        </div>
-                        <div class="suite-node node-2">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="3" stroke="#00c853" stroke-width="1.5"/><path d="M5 21v-2a4 4 0 014-4h6a4 4 0 014 4v2" stroke="#00c853" stroke-width="1.5"/></svg>
-                        </div>
-                        <div class="suite-node node-3">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="14" width="4" height="6" stroke="#00c853" stroke-width="1.5"/><rect x="10" y="10" width="4" height="10" stroke="#00c853" stroke-width="1.5"/><rect x="16" y="6" width="4" height="14" stroke="#00c853" stroke-width="1.5"/></svg>
-                        </div>
-                        <div class="suite-node node-4">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="12" r="3" stroke="#00c853" stroke-width="1.5"/><circle cx="18" cy="6" r="3" stroke="#00c853" stroke-width="1.5"/><circle cx="18" cy="18" r="3" stroke="#00c853" stroke-width="1.5"/></svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solutions Section -->
-    <section class="section" id="soluciones">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Soluciones por industria</p>
-                <h2 class="section-title">Tecnología que se adapta<br>a tu negocio.</h2>
-                <p class="section-desc">
-                    Trabajamos con empresas de diferentes industrias. Nuestras plataformas 
-                    se configuran para resolver los retos específicos de cada sector.
+                <h1 class="hero-title" id="hero-heading">
+                    Construimos el software<br>
+                    <span>que mueve empresas.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Plataformas para coordinar equipos, agendar sin fricción y gestionar relaciones con clientes — con una misma exigencia de excelencia.
                 </p>
-            </div>
-            <div class="solutions-grid">
-                <div class="solution-card">
-                    <div class="solution-icon">🏥</div>
-                    <h4>Salud</h4>
-                    <p>Agendamiento de citas médicas, gestión de pacientes y coordinación de personal clínico.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🎪</div>
-                    <h4>Eventos</h4>
-                    <p>Coordinación de staff, logística en tiempo real y reportes de operación para eventos masivos.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🏨</div>
-                    <h4>Hospitalidad</h4>
-                    <p>Reservas inteligentes, gestión de huéspedes y automatización de servicios al cliente.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🏢</div>
-                    <h4>Servicios Profesionales</h4>
-                    <p>CRM para firmas, agendamiento de consultorías y seguimiento de proyectos.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🎓</div>
-                    <h4>Educación</h4>
-                    <p>Programación de clases, coordinación de tutores y gestión de horarios académicos.</p>
-                </div>
-                <div class="solution-card">
-                    <div class="solution-icon">🛒</div>
-                    <h4>Retail & Comercio</h4>
-                    <p>Gestión de equipos de tienda, turnos rotativos y relación con clientes frecuentes.</p>
+                <div class="hero-actions">
+                    <a href="#productos" class="btn btn-primary">Explorar productos</a>
+                    <a href="#contacto" class="btn btn-secondary">Solicitar demo</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Section -->
-    <section class="section section-dark" id="nosotros">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-tag">Cómo trabajamos</p>
-                <h2 class="section-title">No solo escribimos código.<br>Construimos confianza.</h2>
-            </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-number">01</div>
-                    <h4>Visión Global</h4>
-                    <p>Pensamos en grande, actuamos globalmente. Construimos para escala internacional.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-number">02</div>
-                    <h4>Innovación</h4>
-                    <p>Impulsamos ideas que transforman industrias. La tecnología es nuestro medio, no nuestro fin.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-number">03</div>
-                    <h4>Impacto Real</h4>
-                    <p>Creamos soluciones que generan valor sostenible y medible para cada cliente.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-number">04</div>
-                    <h4>Confianza</h4>
-                    <p>Transparencia, seguridad y excelencia en todo lo que hacemos. Tu negocio es nuestro compromiso.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-number">05</div>
-                    <h4>Crecimiento</h4>
-                    <p>Evolucionamos constantemente. Cada producto mejora, cada cliente crece con nosotros.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section cta-section" id="contacto">
-        <div class="container">
-            <div class="cta-layout">
-                <div class="cta-content">
-                    <h2 class="cta-title">¿Tienes un reto que<br>vale la pena construir?</h2>
-                    <p class="cta-desc">
-                        Cuéntanos qué necesitas: una demo de Kalirio o Kalenda, 
-                        una integración a medida o una idea desde cero. Respondemos rápido.
+        <section class="section" id="productos" aria-labelledby="productos-heading">
+            <div class="container">
+                <div class="section-header centered reveal">
+                    <p class="section-tag">Nuestros productos</p>
+                    <h2 class="section-title" id="productos-heading">Tres plataformas.<br>Un ecosistema.</h2>
+                    <p class="section-desc">
+                        Productos independientes, pensados para integrarse dentro del ecosistema Kalimas.
                     </p>
-                    <div class="cta-info">
-                        <div class="cta-info-item">
-                            <span class="cta-info-label">correo</span>
-                            <a href="mailto:hola@kalimasgroup.net" class="cta-info-value">hola@kalimasgroup.net</a>
-                        </div>
-                        <div class="cta-info-item">
-                            <span class="cta-info-label">web</span>
-                            <a href="https://kalimasgroup.net" class="cta-info-value">kalimasgroup.net</a>
+                </div>
+                <div class="products-list reveal">
+                    <a class="product-row" href="productos/kalirio.html">
+                        <h3 class="product-row-name">kali<em>rio</em></h3>
+                        <p class="product-row-desc">Gestión y operación de eventos de cualquier escala.</p>
+                        <span class="product-row-arrow" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </a>
+                    <a class="product-row" href="productos/kalenda.html">
+                        <h3 class="product-row-name">kalen<em>da</em></h3>
+                        <p class="product-row-desc">Agendamiento inteligente de citas y reservas.</p>
+                        <span class="product-row-arrow" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </a>
+                    <a class="product-row" href="productos/kalima-suite.html">
+                        <h3 class="product-row-name">Kalima Suite</h3>
+                        <p class="product-row-desc">CRM, analytics e integraciones en una sola plataforma.</p>
+                        <span class="product-row-arrow" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-section section-surface" id="kalirio-preview" aria-labelledby="kalirio-heading">
+            <div class="container">
+                <div class="product-layout">
+                    <div class="product-info reveal">
+                        <div class="product-badge">Eventos &amp; Operaciones</div>
+                        <h3 class="product-name" id="kalirio-heading">
+                            kali<span class="product-name-accent">rio</span>
+                        </h3>
+                        <p class="product-tagline">Plataforma integral para la gestión y operación de eventos.</p>
+                        <p class="product-description">
+                            Desde la coordinación de staff hasta el seguimiento en tiempo real,
+                            Kalirio unifica tickets, asistentes, experiencias y analytics en una sola plataforma.
+                        </p>
+                        <ul class="product-features">
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Tickets y control de accesos</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Gestión de asistentes en tiempo real</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Coordinación de staff multi-sede</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Analytics y reportes de operación</span></li>
+                        </ul>
+                        <a href="productos/kalirio.html" class="btn btn-primary">Ver Kalirio</a>
+                    </div>
+                    <div class="product-visual reveal reveal-delay-1">
+                        <div class="product-mockup mockup-kalirio" aria-hidden="true">
+                            <div class="mockup-header">
+                                <div class="mockup-dots"><span></span><span></span><span></span></div>
+                                <span class="mockup-title">Kalirio Dashboard</span>
+                            </div>
+                            <div class="mockup-body">
+                                <div class="mockup-sidebar">
+                                    <div class="mockup-nav-item active"></div>
+                                    <div class="mockup-nav-item"></div>
+                                    <div class="mockup-nav-item"></div>
+                                    <div class="mockup-nav-item"></div>
+                                </div>
+                                <div class="mockup-content">
+                                    <div class="mockup-stat-row">
+                                        <div class="mockup-stat"><span class="stat-number">2,450</span><span class="stat-label">Asistentes</span></div>
+                                        <div class="mockup-stat"><span class="stat-number">98%</span><span class="stat-label">Check-in</span></div>
+                                        <div class="mockup-stat"><span class="stat-number">124</span><span class="stat-label">Staff</span></div>
+                                    </div>
+                                    <div class="mockup-chart"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="cta-form-wrapper">
-                    <form class="cta-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+        </section>
+
+        <section class="product-section" id="kalenda-preview" aria-labelledby="kalenda-heading">
+            <div class="container">
+                <div class="product-layout product-layout-reverse">
+                    <div class="product-info reveal">
+                        <div class="product-badge">Agendamiento de citas</div>
+                        <h3 class="product-name" id="kalenda-heading">
+                            kalen<span class="product-name-accent">da</span>
+                        </h3>
+                        <p class="product-tagline">Agenda, automatiza y gestiona citas sin fricción.</p>
+                        <p class="product-description">
+                            Disponibilidad en tiempo real, recordatorios multicanal y reportes —
+                            como producto independiente o módulo de Kalima Suite.
+                        </p>
+                        <ul class="product-features">
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Disponibilidad en tiempo real</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Recordatorios automáticos multicanal</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Confirmaciones y perfiles de cliente</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Métricas de citas y no-shows</span></li>
+                        </ul>
+                        <a href="productos/kalenda.html" class="btn btn-primary">Ver Kalenda</a>
+                    </div>
+                    <div class="product-visual reveal reveal-delay-1">
+                        <div class="product-mockup mockup-kalenda" aria-hidden="true">
+                            <div class="mockup-header">
+                                <div class="mockup-dots"><span></span><span></span><span></span></div>
+                                <span class="mockup-title">Kalenda</span>
+                            </div>
+                            <div class="mockup-body">
+                                <div class="mockup-calendar">
+                                    <div class="cal-header"><span>Junio 2026</span></div>
+                                    <div class="cal-grid">
+                                        <div class="cal-day">L</div><div class="cal-day">M</div><div class="cal-day">M</div><div class="cal-day">J</div><div class="cal-day">V</div>
+                                        <div class="cal-num">1</div><div class="cal-num">2</div><div class="cal-num">3</div><div class="cal-num active">4</div><div class="cal-num">5</div>
+                                        <div class="cal-num">8</div><div class="cal-num">9</div><div class="cal-num highlight">10</div><div class="cal-num">11</div><div class="cal-num">12</div>
+                                    </div>
+                                    <div class="cal-events">
+                                        <div class="cal-event"><span class="event-time">09:00</span><span class="event-name">Consulta — María L.</span></div>
+                                        <div class="cal-event event-confirmed"><span class="event-time">11:30</span><span class="event-name">Demo — Empresa XYZ</span></div>
+                                        <div class="cal-event"><span class="event-time">15:00</span><span class="event-name">Seguimiento — Carlos R.</span></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="correo">Correo</label>
-                            <input type="email" id="correo" name="correo" required placeholder="tu@empresa.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="interes">Me interesa</label>
-                            <select id="interes" name="interes" required>
-                                <option value="" disabled selected>Selecciona una opción</option>
-                                <option value="kalirio">Kalirio — Staff Platform</option>
-                                <option value="kalenda">Kalenda — Agendamiento</option>
-                                <option value="kalima-suite">Kalima Suite — CRM + Módulos</option>
-                                <option value="custom">Desarrollo a medida</option>
-                                <option value="otro">Otro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section class="product-section section-dark" id="kalima-suite-preview" aria-labelledby="suite-heading">
+            <div class="container">
+                <div class="product-layout">
+                    <div class="product-info reveal">
+                        <div class="product-badge">Suite empresarial</div>
+                        <h3 class="product-name" id="suite-heading">Kalima Suite</h3>
+                        <p class="product-tagline">Todo tu negocio. Una sola plataforma.</p>
+                        <p class="product-description">
+                            Kalenda, CRM, analytics e integraciones unificados para empresas
+                            que buscan eficiencia operativa sin fragmentar sus herramientas.
+                        </p>
+                        <div class="suite-modules">
+                            <div class="module-card">
+                                <div class="module-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.5"/></svg>
+                                </div>
+                                <h4>Kalenda</h4>
+                                <p>Agendamiento y reservas</p>
+                            </div>
+                            <div class="module-card">
+                                <div class="module-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="17" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="currentColor" stroke-width="1.5"/></svg>
+                                </div>
+                                <h4>CRM</h4>
+                                <p>Pipeline y relaciones</p>
+                            </div>
+                            <div class="module-card">
+                                <div class="module-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="14" width="4" height="6" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="10" width="4" height="10" stroke="currentColor" stroke-width="1.5"/><rect x="16" y="6" width="4" height="14" stroke="currentColor" stroke-width="1.5"/></svg>
+                                </div>
+                                <h4>Analytics</h4>
+                                <p>Métricas de negocio</p>
+                            </div>
+                            <div class="module-card">
+                                <div class="module-icon" aria-hidden="true">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="9" y1="11" x2="15" y2="7" stroke="currentColor" stroke-width="1.5"/><line x1="9" y1="13" x2="15" y2="17" stroke="currentColor" stroke-width="1.5"/></svg>
+                                </div>
+                                <h4>Integraciones</h4>
+                                <p>Conecta tu stack</p>
+                            </div>
+                        </div>
+                        <a href="productos/kalima-suite.html" class="btn btn-primary">Explorar la suite</a>
+                    </div>
+                    <div class="product-visual reveal reveal-delay-1">
+                        <div class="suite-visual" aria-hidden="true">
+                            <div class="suite-ring ring-outer"></div>
+                            <div class="suite-ring ring-inner"></div>
+                            <div class="suite-center">
+                                <span class="suite-logo">K</span>
+                                <span class="suite-label">Suite</span>
+                            </div>
+                            <div class="suite-node node-1">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                            <div class="suite-node node-2">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M5 21v-2a4 4 0 014-4h6a4 4 0 014 4v2" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                            <div class="suite-node node-3">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="4" y="14" width="4" height="6" stroke="currentColor" stroke-width="1.5"/><rect x="10" y="10" width="4" height="10" stroke="currentColor" stroke-width="1.5"/><rect x="16" y="6" width="4" height="14" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                            <div class="suite-node node-4">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="6" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="6" r="3" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="soluciones" aria-labelledby="soluciones-heading">
+            <div class="container">
+                <div class="section-header centered reveal">
+                    <p class="section-tag">Soluciones por industria</p>
+                    <h2 class="section-title" id="soluciones-heading">Tecnología que se adapta<br>a tu negocio.</h2>
+                    <p class="section-desc">
+                        Configuramos nuestras plataformas para los retos específicos de cada sector.
+                    </p>
+                </div>
+                <div class="solutions-grid">
+                    <article class="solution-item reveal">
+                        <div class="solution-icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="12" width="24" height="18" rx="3" stroke="currentColor" stroke-width="1.75"/><path d="M14 12V10a6 6 0 0112 0v2" stroke="currentColor" stroke-width="1.75"/><circle cx="20" cy="22" r="3" stroke="currentColor" stroke-width="1.75"/></svg>
+                        </div>
+                        <h4>Salud</h4>
+                        <p>Agendamiento de citas médicas, gestión de pacientes y coordinación de personal clínico.</p>
+                    </article>
+                    <article class="solution-item reveal reveal-delay-1">
+                        <div class="solution-icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M8 28l12-16 12 16H8z" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><circle cx="20" cy="22" r="3" stroke="currentColor" stroke-width="1.75"/></svg>
+                        </div>
+                        <h4>Eventos</h4>
+                        <p>Coordinación de staff, logística en tiempo real y reportes de operación para eventos masivos.</p>
+                    </article>
+                    <article class="solution-item reveal reveal-delay-2">
+                        <div class="solution-icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M6 28V16l14-8 14 8v12" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><rect x="16" y="22" width="8" height="6" stroke="currentColor" stroke-width="1.75"/></svg>
+                        </div>
+                        <h4>Hospitalidad</h4>
+                        <p>Reservas inteligentes, gestión de huéspedes y automatización de servicios al cliente.</p>
+                    </article>
+                    <article class="solution-item reveal">
+                        <div class="solution-icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="10" y="8" width="20" height="24" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M16 16h8M16 21h8M16 26h5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/></svg>
+                        </div>
+                        <h4>Servicios profesionales</h4>
+                        <p>CRM para firmas, agendamiento de consultorías y seguimiento de proyectos.</p>
+                    </article>
+                    <article class="solution-item reveal reveal-delay-1">
+                        <div class="solution-icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><path d="M10 28V18l10-8 10 8v10" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"/><path d="M16 28v-6h8v6" stroke="currentColor" stroke-width="1.75"/></svg>
+                        </div>
+                        <h4>Educación</h4>
+                        <p>Programación de clases, coordinación de tutores y gestión de horarios académicos.</p>
+                    </article>
+                    <article class="solution-item reveal reveal-delay-2">
+                        <div class="solution-icon" aria-hidden="true">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect x="8" y="14" width="24" height="14" rx="2" stroke="currentColor" stroke-width="1.75"/><path d="M12 14V12a8 8 0 0116 0v2" stroke="currentColor" stroke-width="1.75"/><circle cx="20" cy="21" r="2" fill="currentColor"/></svg>
+                        </div>
+                        <h4>Retail &amp; comercio</h4>
+                        <p>Gestión de equipos de tienda, turnos rotativos y relación con clientes frecuentes.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-dark" id="nosotros" aria-labelledby="nosotros-heading">
+            <div class="container">
+                <div class="section-header centered reveal">
+                    <p class="section-tag">Cómo trabajamos</p>
+                    <h2 class="section-title" id="nosotros-heading">No solo escribimos código.<br>Construimos confianza.</h2>
+                </div>
+                <div class="values-grid">
+                    <article class="value-card reveal">
+                        <div class="value-number">01</div>
+                        <h4>Visión global</h4>
+                        <p>Pensamos en grande y construimos para escala internacional.</p>
+                    </article>
+                    <article class="value-card reveal reveal-delay-1">
+                        <div class="value-number">02</div>
+                        <h4>Innovación</h4>
+                        <p>Impulsamos ideas que transforman industrias.</p>
+                    </article>
+                    <article class="value-card reveal reveal-delay-2">
+                        <div class="value-number">03</div>
+                        <h4>Impacto real</h4>
+                        <p>Soluciones con valor sostenible y medible.</p>
+                    </article>
+                    <article class="value-card reveal reveal-delay-3">
+                        <div class="value-number">04</div>
+                        <h4>Confianza</h4>
+                        <p>Transparencia, seguridad y excelencia en cada entrega.</p>
+                    </article>
+                    <article class="value-card reveal reveal-delay-4">
+                        <div class="value-number">05</div>
+                        <h4>Crecimiento</h4>
+                        <p>Cada producto evoluciona; cada cliente crece con nosotros.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-surface" id="contacto" aria-labelledby="contacto-heading">
+            <div class="container">
+                <div class="cta-layout">
+                    <div class="cta-content reveal">
+                        <h2 class="cta-title" id="contacto-heading">¿Tienes un reto que<br>vale la pena construir?</h2>
+                        <p class="cta-desc">
+                            Cuéntanos qué necesitas: una demo de Kalirio o Kalenda,
+                            una integración a medida o una idea desde cero. Respondemos rápido.
+                        </p>
+                        <div class="cta-info">
+                            <div class="cta-info-item">
+                                <span class="cta-info-label">Correo</span>
+                                <a href="mailto:hola@kalimasgroup.net" class="cta-info-value">hola@kalimasgroup.net</a>
+                            </div>
+                            <div class="cta-info-item">
+                                <span class="cta-info-label">Web</span>
+                                <a href="https://kalimasgroup.net" class="cta-info-value">kalimasgroup.net</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cta-form-wrapper reveal reveal-delay-1">
+                        <form class="cta-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                            <input type="hidden" name="_subject" value="Nuevo contacto — Kalimas Group">
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" id="nombre" name="nombre" required autocomplete="name" placeholder="Tu nombre">
+                                <span class="form-error" data-error-for="nombre" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="correo">Correo</label>
+                                <input type="email" id="correo" name="correo" required autocomplete="email" placeholder="tu@empresa.com">
+                                <span class="form-error" data-error-for="correo" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="interes">Me interesa</label>
+                                <select id="interes" name="interes" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="kalirio">Kalirio — Eventos</option>
+                                    <option value="kalenda">Kalenda — Agendamiento</option>
+                                    <option value="kalima-suite">Kalima Suite — CRM + Módulos</option>
+                                    <option value="custom">Desarrollo a medida</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <span class="form-error" data-error-for="interes" role="alert"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                                <span class="form-error" data-error-for="mensaje" role="alert"></span>
+                            </div>
+                            <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+                            <button type="submit" class="btn btn-primary btn-full" id="formSubmit">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <svg class="footer-logo-svg" width="40" height="40" viewBox="0 0 36 36" fill="none">
-                        <path d="M10 8v20l8-12 8 12V8" stroke="#00c853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    <svg width="40" height="40" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+                        <path d="M10 8v20l8-12 8 12V8" stroke="#00c853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <line x1="26" y1="6" x2="18" y2="32" stroke="#00c853" stroke-width="1.5" opacity="0.6"/>
                     </svg>
                     <span class="footer-brand-name">KALIMAS GROUP</span>
@@ -503,9 +460,9 @@
                     <div class="footer-col">
                         <h5>Productos</h5>
                         <ul>
-                            <li><a href="#kalirio">Kalirio</a></li>
-                            <li><a href="#kalenda">Kalenda</a></li>
-                            <li><a href="#kalima-suite">Kalima Suite</a></li>
+                            <li><a href="productos/kalirio.html">Kalirio</a></li>
+                            <li><a href="productos/kalenda.html">Kalenda</a></li>
+                            <li><a href="productos/kalima-suite.html">Kalima Suite</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
