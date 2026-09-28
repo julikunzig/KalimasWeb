@@ -3,10 +3,15 @@
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    if (window.KalimasI18n) window.KalimasI18n.init();
     initNavigation();
     initScrollAnimations();
     initForm();
 });
+
+function tr(key) {
+    return window.KalimasI18n ? window.KalimasI18n.t(key) : key;
+}
 
 function initNavigation() {
     const nav = document.getElementById('nav');
@@ -26,13 +31,12 @@ function initNavigation() {
             mobileMenu.classList.toggle('active', open);
             toggle.classList.toggle('active', open);
             toggle.setAttribute('aria-expanded', String(open));
-            toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+            toggle.setAttribute('aria-label', tr(open ? 'a11y.menuClose' : 'a11y.menuOpen'));
             document.body.classList.toggle('menu-open', open);
 
             if (open) {
                 mobileMenu.removeAttribute('hidden');
             } else {
-                // Keep hidden for a11y after transition
                 window.setTimeout(() => {
                     if (!mobileMenu.classList.contains('active')) {
                         mobileMenu.setAttribute('hidden', '');
@@ -41,7 +45,6 @@ function initNavigation() {
             }
         };
 
-        // Ensure closed state on load
         mobileMenu.setAttribute('hidden', '');
         setMenuOpen(false);
 
@@ -58,6 +61,11 @@ function initNavigation() {
                 setMenuOpen(false);
                 toggle.focus();
             }
+        });
+
+        document.addEventListener('kalimas:langchange', () => {
+            const open = mobileMenu.classList.contains('active');
+            toggle.setAttribute('aria-label', tr(open ? 'a11y.menuClose' : 'a11y.menuOpen'));
         });
     }
 
@@ -109,7 +117,6 @@ function initForm() {
     const submitBtn = document.getElementById('formSubmit');
     const statusEl = document.getElementById('formStatus');
     const fields = ['nombre', 'correo', 'interes', 'mensaje'];
-
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     const clearErrors = () => {
@@ -142,28 +149,28 @@ function initForm() {
         const mensaje = form.mensaje.value.trim();
 
         if (!nombre) {
-            setFieldError('nombre', 'El nombre es obligatorio.');
+            setFieldError('nombre', tr('form.err.name'));
             valid = false;
         }
 
         if (!correo) {
-            setFieldError('correo', 'El correo es obligatorio.');
+            setFieldError('correo', tr('form.err.email'));
             valid = false;
         } else if (!emailPattern.test(correo)) {
-            setFieldError('correo', 'Introduce un correo válido.');
+            setFieldError('correo', tr('form.err.emailInvalid'));
             valid = false;
         }
 
         if (!interes) {
-            setFieldError('interes', 'Selecciona una opción.');
+            setFieldError('interes', tr('form.err.interest'));
             valid = false;
         }
 
         if (!mensaje) {
-            setFieldError('mensaje', 'El mensaje es obligatorio.');
+            setFieldError('mensaje', tr('form.err.message'));
             valid = false;
         } else if (mensaje.length < 10) {
-            setFieldError('mensaje', 'Escribe al menos 10 caracteres.');
+            setFieldError('mensaje', tr('form.err.messageShort'));
             valid = false;
         }
 
@@ -176,6 +183,10 @@ function initForm() {
         statusEl.className = `form-status is-visible is-${type}`;
     };
 
+    const resetSubmitLabel = () => {
+        if (submitBtn) submitBtn.textContent = tr('form.submit');
+    };
+
     fields.forEach((name) => {
         const input = form.elements[name];
         if (!input) return;
@@ -186,10 +197,14 @@ function initForm() {
         });
     });
 
+    document.addEventListener('kalimas:langchange', () => {
+        if (submitBtn && !submitBtn.disabled) resetSubmitLabel();
+    });
+
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         if (!validate()) {
-            showStatus('error', 'Revisa los campos marcados.');
+            showStatus('error', tr('form.err.fields'));
             return;
         }
 
@@ -198,20 +213,16 @@ function initForm() {
 
         if (submitBtn) {
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Enviando…';
+            submitBtn.textContent = tr('form.sending');
         }
 
         if (isPlaceholder) {
-            // Local/dev fallback until Formspree ID is configured
             await new Promise((r) => setTimeout(r, 600));
-            showStatus(
-                'success',
-                'Formulario validado. Configura tu Formspree ID en el atributo action del formulario para envíos reales.'
-            );
+            showStatus('success', tr('form.ok.dev'));
             form.reset();
             if (submitBtn) {
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Enviar mensaje';
+                resetSubmitLabel();
             }
             return;
         }
@@ -225,24 +236,21 @@ function initForm() {
             });
 
             if (response.ok) {
-                showStatus('success', '¡Mensaje enviado! Te responderemos pronto.');
+                showStatus('success', tr('form.ok.sent'));
                 form.reset();
             } else {
                 const data = await response.json().catch(() => ({}));
                 const msg =
                     (data.errors && data.errors.map((err) => err.message).join(' ')) ||
-                    'No se pudo enviar. Inténtalo de nuevo o escribe a hola@kalimasgroup.net.';
+                    tr('form.err.send');
                 showStatus('error', msg);
             }
         } catch {
-            showStatus(
-                'error',
-                'Error de conexión. Inténtalo de nuevo o escribe a hola@kalimasgroup.net.'
-            );
+            showStatus('error', tr('form.err.network'));
         } finally {
             if (submitBtn) {
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Enviar mensaje';
+                resetSubmitLabel();
             }
         }
     });

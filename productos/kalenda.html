@@ -1,36 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalenda — Agendamiento inteligente | Kalimas Group</title>
-    <meta name="description" content="Kalenda automatiza citas y reservas con disponibilidad en tiempo real, recordatorios multicanal y métricas de no-shows.">
+    <title>Kalenda — Smart Scheduling | Kalimas Group</title>
+    <meta name="description" content="Kalenda automates appointments and bookings with real-time availability, multichannel reminders, and no-show metrics.">
     <meta name="theme-color" content="#00c853">
     <link rel="canonical" href="https://kalimasgroup.net/productos/kalenda.html">
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kalimasgroup.net/productos/kalenda.html">
-    <meta property="og:title" content="Kalenda — Agendamiento inteligente | Kalimas Group">
-    <meta property="og:description" content="Agenda, automatiza y gestiona citas sin fricción.">
-    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Kalenda — Smart Scheduling | Kalimas Group">
+    <meta property="og:description" content="Schedule, automate, and manage appointments without friction.">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Kalimas Group">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kalenda — Agendamiento inteligente">
-    <meta name="twitter:description" content="Disponibilidad en tiempo real, recordatorios y métricas de citas.">
+    <meta name="twitter:title" content="Kalenda — Smart Scheduling">
+    <meta name="twitter:description" content="Real-time availability, reminders, and appointment metrics.">
+
+    <script>
+        (function () {
+            try {
+                var l = localStorage.getItem('kalimas-lang');
+                if (l !== 'es' && l !== 'en') l = 'en';
+                document.documentElement.lang = l;
+                document.documentElement.dataset.lang = l;
+            } catch (e) { document.documentElement.lang = 'en'; }
+        })();
+    </script>
+    <style>html[data-lang="es"]:not(.i18n-ready) body { visibility: hidden; }</style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
-    <a class="skip-link" href="#main">Saltar al contenido</a>
+<body data-page="kalenda">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
     <header>
-        <nav class="nav" id="nav" aria-label="Principal">
+        <nav class="nav" id="nav" data-i18n-aria="a11y.nav" aria-label="Main">
             <div class="nav-container">
-                <a href="../index.html" class="nav-logo" aria-label="Kalimas Group — Inicio">
+                <a href="../index.html" class="nav-logo" data-i18n-aria="a11y.home" aria-label="Kalimas Group — Home">
                     <svg class="nav-logo-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
                         <path d="M10 8v20l8-12 8 12V8" stroke="#00c853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <line x1="26" y1="6" x2="18" y2="32" stroke="#00c853" stroke-width="1.5" opacity="0.6"/>
@@ -38,45 +50,54 @@
                     <span class="logo-text">KALIMAS GROUP</span>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="../index.html#productos">Productos</a></li>
-                    <li><a href="../index.html#soluciones">Soluciones</a></li>
-                    <li><a href="../index.html#nosotros">Nosotros</a></li>
-                    <li><a href="../index.html#contacto">Contacto</a></li>
+                    <li><a href="../index.html#productos" data-i18n="nav.products">Products</a></li>
+                    <li><a href="../index.html#soluciones" data-i18n="nav.solutions">Solutions</a></li>
+                    <li><a href="../index.html#nosotros" data-i18n="nav.about">About</a></li>
+                    <li><a href="../index.html#contacto" data-i18n="nav.contact">Contact</a></li>
                 </ul>
-                <a href="../index.html#contacto" class="nav-cta">Solicitar demo</a>
-                <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
-                    <span></span>
-                    <span></span>
+                <div class="nav-actions">
+                    <div class="lang-switch" role="group" data-i18n-aria="a11y.lang" aria-label="Language">
+                        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+                        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+                    </div>
+                    <a href="../index.html#contacto" class="nav-cta" data-i18n="nav.ctaDemo">Request demo</a>
+                </div>
+                <button class="nav-toggle" type="button" data-i18n-aria="a11y.menuOpen" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <span></span><span></span>
                 </button>
             </div>
         </nav>
         <div class="mobile-menu" id="mobileMenu" hidden>
             <ul class="mobile-menu-links">
-                <li><a href="../index.html#productos">Productos</a></li>
-                <li><a href="../index.html#soluciones">Soluciones</a></li>
-                <li><a href="../index.html#nosotros">Nosotros</a></li>
-                <li><a href="../index.html#contacto">Contacto</a></li>
+                <li><a href="../index.html#productos" data-i18n="nav.products">Products</a></li>
+                <li><a href="../index.html#soluciones" data-i18n="nav.solutions">Solutions</a></li>
+                <li><a href="../index.html#nosotros" data-i18n="nav.about">About</a></li>
+                <li><a href="../index.html#contacto" data-i18n="nav.contact">Contact</a></li>
             </ul>
-            <a href="../index.html#contacto" class="btn btn-primary mobile-menu-cta">Solicitar demo</a>
+            <div class="lang-switch lang-switch-mobile" role="group" data-i18n-aria="a11y.lang" aria-label="Language">
+                <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+                <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+            </div>
+            <a href="../index.html#contacto" class="btn btn-primary mobile-menu-cta" data-i18n="nav.ctaDemo">Request demo</a>
         </div>
     </header>
 
     <main id="main">
         <section class="page-hero">
             <div class="container page-hero-inner">
-                <nav class="breadcrumb" aria-label="Migas de pan">
-                    <a href="../index.html">Inicio</a>
+                <nav class="breadcrumb" data-i18n-aria="a11y.breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html" data-i18n="page.breadcrumb.home">Home</a>
                     <span aria-hidden="true">/</span>
-                    <a href="../index.html#productos">Productos</a>
+                    <a href="../index.html#productos" data-i18n="page.breadcrumb.products">Products</a>
                     <span aria-hidden="true">/</span>
                     <span>Kalenda</span>
                 </nav>
-                <div class="product-badge">Agendamiento de citas</div>
+                <div class="product-badge" data-i18n="kalenda.badge">Appointment scheduling</div>
                 <h1 class="product-name">kalen<span class="product-name-accent">da</span></h1>
-                <p class="product-tagline">Plataforma inteligente para agendar, automatizar y gestionar citas y reservas.</p>
+                <p class="product-tagline" data-i18n="kalenda.tagline">Smart platform to schedule, automate, and manage appointments and bookings.</p>
                 <div class="hero-actions" style="margin-top: 32px;">
-                    <a href="../index.html#contacto" class="btn btn-primary">Solicitar demo</a>
-                    <a href="kalima-suite.html" class="btn btn-secondary">Ver Kalima Suite</a>
+                    <a href="../index.html#contacto" class="btn btn-primary" data-i18n="page.requestDemo">Request demo</a>
+                    <a href="kalima-suite.html" class="btn btn-secondary" data-i18n="page.viewSuite">View Kalima Suite</a>
                 </div>
             </div>
         </section>
@@ -85,18 +106,16 @@
             <div class="container">
                 <div class="product-layout product-layout-reverse">
                     <div class="product-info reveal">
-                        <h2 class="section-title" style="font-size: clamp(1.75rem, 3vw, 2.25rem);">Agenda que trabaja por ti.</h2>
-                        <p class="product-description">
-                            Kalenda reduce no-shows y trabajo manual con disponibilidad en tiempo real,
-                            recordatorios multicanal y perfiles de cliente. Úsalo solo o como módulo
-                            dentro de Kalima Suite.
+                        <h2 class="section-title" style="font-size: clamp(1.75rem, 3vw, 2.25rem);" data-i18n="kalenda.h2">A calendar that works for you.</h2>
+                        <p class="product-description" data-i18n="kalenda.desc">
+                            Kalenda reduces no-shows and manual work with real-time availability, multichannel reminders, and customer profiles. Use it alone or as a module inside Kalima Suite.
                         </p>
                         <ul class="product-features">
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Disponibilidad en tiempo real</span></li>
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Recordatorios automáticos multicanal</span></li>
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Confirmaciones y perfiles de cliente</span></li>
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Reportes y métricas de citas</span></li>
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Integración con Kalima Suite</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalenda.f1">Real-time availability</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalenda.f2">Automatic multichannel reminders</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalenda.f3">Confirmations and customer profiles</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalenda.f4">Appointment reports and metrics</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalenda.f5">Integration with Kalima Suite</span></li>
                         </ul>
                     </div>
                     <div class="product-visual reveal reveal-delay-1">
@@ -107,16 +126,20 @@
                             </div>
                             <div class="mockup-body">
                                 <div class="mockup-calendar">
-                                    <div class="cal-header"><span>Junio 2026</span></div>
+                                    <div class="cal-header"><span data-i18n="home.kalenda.month">June 2026</span></div>
                                     <div class="cal-grid">
-                                        <div class="cal-day">L</div><div class="cal-day">M</div><div class="cal-day">M</div><div class="cal-day">J</div><div class="cal-day">V</div>
+                                        <div class="cal-day" data-i18n="home.cal.mon">M</div>
+                                        <div class="cal-day" data-i18n="home.cal.tue">T</div>
+                                        <div class="cal-day" data-i18n="home.cal.wed">W</div>
+                                        <div class="cal-day" data-i18n="home.cal.thu">T</div>
+                                        <div class="cal-day" data-i18n="home.cal.fri">F</div>
                                         <div class="cal-num">1</div><div class="cal-num">2</div><div class="cal-num">3</div><div class="cal-num active">4</div><div class="cal-num">5</div>
                                         <div class="cal-num">8</div><div class="cal-num">9</div><div class="cal-num highlight">10</div><div class="cal-num">11</div><div class="cal-num">12</div>
                                     </div>
                                     <div class="cal-events">
-                                        <div class="cal-event"><span class="event-time">09:00</span><span class="event-name">Consulta — María L.</span></div>
-                                        <div class="cal-event event-confirmed"><span class="event-time">11:30</span><span class="event-name">Demo — Empresa XYZ</span></div>
-                                        <div class="cal-event"><span class="event-time">15:00</span><span class="event-name">Seguimiento — Carlos R.</span></div>
+                                        <div class="cal-event"><span class="event-time">09:00</span><span class="event-name" data-i18n="home.kalenda.e1">Consult — María L.</span></div>
+                                        <div class="cal-event event-confirmed"><span class="event-time">11:30</span><span class="event-name" data-i18n="home.kalenda.e2">Demo — Company XYZ</span></div>
+                                        <div class="cal-event"><span class="event-time">15:00</span><span class="event-name" data-i18n="home.kalenda.e3">Follow-up — Carlos R.</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -129,21 +152,21 @@
         <section class="section section-surface">
             <div class="container">
                 <div class="section-header reveal">
-                    <p class="section-tag">Industrias</p>
-                    <h2 class="section-title">Donde el tiempo es el producto</h2>
+                    <p class="section-tag" data-i18n="kalenda.ind.tag">Industries</p>
+                    <h2 class="section-title" data-i18n="kalenda.ind.title">Where time is the product</h2>
                 </div>
                 <div class="solutions-grid">
                     <article class="solution-item reveal">
-                        <h4>Clínicas y salud</h4>
-                        <p>Citas médicas con recordatorios y menor tasa de ausencias.</p>
+                        <h4 data-i18n="kalenda.ind.p1">Clinics &amp; healthcare</h4>
+                        <p data-i18n="kalenda.ind.p1d">Medical appointments with reminders and fewer no-shows.</p>
                     </article>
                     <article class="solution-item reveal reveal-delay-1">
-                        <h4>Consultorías</h4>
-                        <p>Reservas de reuniones y demos con confirmación automática.</p>
+                        <h4 data-i18n="kalenda.ind.p2">Consulting</h4>
+                        <p data-i18n="kalenda.ind.p2d">Meeting and demo bookings with automatic confirmation.</p>
                     </article>
                     <article class="solution-item reveal reveal-delay-2">
-                        <h4>Servicios y belleza</h4>
-                        <p>Agenda de turnos, perfiles de cliente y reprogramación sencilla.</p>
+                        <h4 data-i18n="kalenda.ind.p3">Services &amp; beauty</h4>
+                        <p data-i18n="kalenda.ind.p3d">Shift calendars, customer profiles, and easy rescheduling.</p>
                     </article>
                 </div>
             </div>
@@ -151,9 +174,9 @@
 
         <section class="page-cta-band">
             <div class="container">
-                <h2>Automatiza tu agenda</h2>
-                <p>Pedimos una demo de Kalenda y te mostramos el flujo completo en minutos.</p>
-                <a href="../index.html#contacto" class="btn btn-primary">Hablemos</a>
+                <h2 data-i18n="kalenda.cta.title">Automate your calendar</h2>
+                <p data-i18n="kalenda.cta.desc">Request a Kalenda demo and we’ll walk you through the full flow in minutes.</p>
+                <a href="../index.html#contacto" class="btn btn-primary" data-i18n="page.ctaTalk">Let’s talk</a>
             </div>
         </section>
     </main>
@@ -171,7 +194,7 @@
                 </div>
                 <div class="footer-links-grid">
                     <div class="footer-col">
-                        <h5>Productos</h5>
+                        <h5 data-i18n="footer.products">Products</h5>
                         <ul>
                             <li><a href="kalirio.html">Kalirio</a></li>
                             <li><a href="kalenda.html" aria-current="page">Kalenda</a></li>
@@ -179,15 +202,15 @@
                         </ul>
                     </div>
                     <div class="footer-col">
-                        <h5>Compañía</h5>
+                        <h5 data-i18n="footer.company">Company</h5>
                         <ul>
-                            <li><a href="../index.html#nosotros">Nosotros</a></li>
-                            <li><a href="../index.html#soluciones">Soluciones</a></li>
-                            <li><a href="../index.html#contacto">Contacto</a></li>
+                            <li><a href="../index.html#nosotros" data-i18n="footer.about">About</a></li>
+                            <li><a href="../index.html#soluciones" data-i18n="footer.solutions">Solutions</a></li>
+                            <li><a href="../index.html#contacto" data-i18n="footer.contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
-                        <h5>Contacto</h5>
+                        <h5 data-i18n="footer.contact">Contact</h5>
                         <ul>
                             <li><a href="mailto:hola@kalimasgroup.net">hola@kalimasgroup.net</a></li>
                             <li><a href="https://kalimasgroup.net">kalimasgroup.net</a></li>
@@ -196,11 +219,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Kalimas Group. Todos los derechos reservados.</p>
+                <p data-i18n="footer.rights">&copy; 2026 Kalimas Group. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="../i18n.js"></script>
     <script src="../main.js"></script>
 </body>
 </html>

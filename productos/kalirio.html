@@ -1,36 +1,48 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalirio — Gestión de eventos | Kalimas Group</title>
-    <meta name="description" content="Kalirio es la plataforma integral de Kalimas Group para gestionar y operar eventos de cualquier escala: tickets, staff, asistentes y analytics.">
+    <title>Kalirio — Event Management | Kalimas Group</title>
+    <meta name="description" content="Kalirio is Kalimas Group’s end-to-end platform to run events of any scale: tickets, staff, attendees, and analytics.">
     <meta name="theme-color" content="#00c853">
     <link rel="canonical" href="https://kalimasgroup.net/productos/kalirio.html">
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kalimasgroup.net/productos/kalirio.html">
-    <meta property="og:title" content="Kalirio — Gestión de eventos | Kalimas Group">
-    <meta property="og:description" content="Tickets, staff, asistentes y analytics en una sola plataforma de eventos.">
-    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Kalirio — Event Management | Kalimas Group">
+    <meta property="og:description" content="Tickets, staff, attendees, and analytics in one event platform.">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Kalimas Group">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kalirio — Gestión de eventos">
-    <meta name="twitter:description" content="Plataforma integral para la operación de eventos de cualquier escala.">
+    <meta name="twitter:title" content="Kalirio — Event Management">
+    <meta name="twitter:description" content="End-to-end platform for event operations at any scale.">
+
+    <script>
+        (function () {
+            try {
+                var l = localStorage.getItem('kalimas-lang');
+                if (l !== 'es' && l !== 'en') l = 'en';
+                document.documentElement.lang = l;
+                document.documentElement.dataset.lang = l;
+            } catch (e) { document.documentElement.lang = 'en'; }
+        })();
+    </script>
+    <style>html[data-lang="es"]:not(.i18n-ready) body { visibility: hidden; }</style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
-    <a class="skip-link" href="#main">Saltar al contenido</a>
+<body data-page="kalirio">
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
 
     <header>
-        <nav class="nav" id="nav" aria-label="Principal">
+        <nav class="nav" id="nav" data-i18n-aria="a11y.nav" aria-label="Main">
             <div class="nav-container">
-                <a href="../index.html" class="nav-logo" aria-label="Kalimas Group — Inicio">
+                <a href="../index.html" class="nav-logo" data-i18n-aria="a11y.home" aria-label="Kalimas Group — Home">
                     <svg class="nav-logo-svg" width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
                         <path d="M10 8v20l8-12 8 12V8" stroke="#00c853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <line x1="26" y1="6" x2="18" y2="32" stroke="#00c853" stroke-width="1.5" opacity="0.6"/>
@@ -38,45 +50,54 @@
                     <span class="logo-text">KALIMAS GROUP</span>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="../index.html#productos">Productos</a></li>
-                    <li><a href="../index.html#soluciones">Soluciones</a></li>
-                    <li><a href="../index.html#nosotros">Nosotros</a></li>
-                    <li><a href="../index.html#contacto">Contacto</a></li>
+                    <li><a href="../index.html#productos" data-i18n="nav.products">Products</a></li>
+                    <li><a href="../index.html#soluciones" data-i18n="nav.solutions">Solutions</a></li>
+                    <li><a href="../index.html#nosotros" data-i18n="nav.about">About</a></li>
+                    <li><a href="../index.html#contacto" data-i18n="nav.contact">Contact</a></li>
                 </ul>
-                <a href="../index.html#contacto" class="nav-cta">Solicitar demo</a>
-                <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
-                    <span></span>
-                    <span></span>
+                <div class="nav-actions">
+                    <div class="lang-switch" role="group" data-i18n-aria="a11y.lang" aria-label="Language">
+                        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+                        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+                    </div>
+                    <a href="../index.html#contacto" class="nav-cta" data-i18n="nav.ctaDemo">Request demo</a>
+                </div>
+                <button class="nav-toggle" type="button" data-i18n-aria="a11y.menuOpen" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+                    <span></span><span></span>
                 </button>
             </div>
         </nav>
         <div class="mobile-menu" id="mobileMenu" hidden>
             <ul class="mobile-menu-links">
-                <li><a href="../index.html#productos">Productos</a></li>
-                <li><a href="../index.html#soluciones">Soluciones</a></li>
-                <li><a href="../index.html#nosotros">Nosotros</a></li>
-                <li><a href="../index.html#contacto">Contacto</a></li>
+                <li><a href="../index.html#productos" data-i18n="nav.products">Products</a></li>
+                <li><a href="../index.html#soluciones" data-i18n="nav.solutions">Solutions</a></li>
+                <li><a href="../index.html#nosotros" data-i18n="nav.about">About</a></li>
+                <li><a href="../index.html#contacto" data-i18n="nav.contact">Contact</a></li>
             </ul>
-            <a href="../index.html#contacto" class="btn btn-primary mobile-menu-cta">Solicitar demo</a>
+            <div class="lang-switch lang-switch-mobile" role="group" data-i18n-aria="a11y.lang" aria-label="Language">
+                <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+                <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+            </div>
+            <a href="../index.html#contacto" class="btn btn-primary mobile-menu-cta" data-i18n="nav.ctaDemo">Request demo</a>
         </div>
     </header>
 
     <main id="main">
         <section class="page-hero">
             <div class="container page-hero-inner">
-                <nav class="breadcrumb" aria-label="Migas de pan">
-                    <a href="../index.html">Inicio</a>
+                <nav class="breadcrumb" data-i18n-aria="a11y.breadcrumb" aria-label="Breadcrumb">
+                    <a href="../index.html" data-i18n="page.breadcrumb.home">Home</a>
                     <span aria-hidden="true">/</span>
-                    <a href="../index.html#productos">Productos</a>
+                    <a href="../index.html#productos" data-i18n="page.breadcrumb.products">Products</a>
                     <span aria-hidden="true">/</span>
                     <span>Kalirio</span>
                 </nav>
-                <div class="product-badge">Eventos &amp; Operaciones</div>
+                <div class="product-badge" data-i18n="kalirio.badge">Events &amp; Operations</div>
                 <h1 class="product-name">kali<span class="product-name-accent">rio</span></h1>
-                <p class="product-tagline">Plataforma integral para la gestión y operación de eventos de cualquier escala.</p>
+                <p class="product-tagline" data-i18n="kalirio.tagline">End-to-end platform for managing and operating events of any scale.</p>
                 <div class="hero-actions" style="margin-top: 32px;">
-                    <a href="../index.html#contacto" class="btn btn-primary">Solicitar demo</a>
-                    <a href="kalenda.html" class="btn btn-secondary">Ver Kalenda</a>
+                    <a href="../index.html#contacto" class="btn btn-primary" data-i18n="page.requestDemo">Request demo</a>
+                    <a href="kalenda.html" class="btn btn-secondary" data-i18n="page.viewKalenda">View Kalenda</a>
                 </div>
             </div>
         </section>
@@ -85,18 +106,16 @@
             <div class="container">
                 <div class="product-layout">
                     <div class="product-info reveal">
-                        <h2 class="section-title" style="font-size: clamp(1.75rem, 3vw, 2.25rem);">Todo el evento. Una sola vista.</h2>
-                        <p class="product-description">
-                            Kalirio conecta tickets, control de accesos, staff y analytics para que
-                            tu operación no dependa de hojas de cálculo ni de chats dispersos.
-                            Diseñado para productores, venues y equipos que operan a escala.
+                        <h2 class="section-title" style="font-size: clamp(1.75rem, 3vw, 2.25rem);" data-i18n="kalirio.h2">The whole event. One view.</h2>
+                        <p class="product-description" data-i18n="kalirio.desc">
+                            Kalirio connects tickets, access control, staff, and analytics so your operation doesn’t depend on spreadsheets or scattered chats. Built for producers, venues, and teams that run at scale.
                         </p>
                         <ul class="product-features">
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Tickets y control de accesos</span></li>
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Gestión de asistentes en tiempo real</span></li>
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Experiencias y activaciones</span></li>
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Coordinación de staff multi-sede</span></li>
-                            <li><span class="feature-icon" aria-hidden="true">→</span><span>Analytics y reportes de operación</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalirio.f1">Tickets and access control</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalirio.f2">Real-time attendee management</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalirio.f3">Experiences and activations</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalirio.f4">Multi-venue staff coordination</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">→</span><span data-i18n="kalirio.f5">Operations analytics and reports</span></li>
                         </ul>
                     </div>
                     <div class="product-visual reveal reveal-delay-1">
@@ -114,9 +133,9 @@
                                 </div>
                                 <div class="mockup-content">
                                     <div class="mockup-stat-row">
-                                        <div class="mockup-stat"><span class="stat-number">2,450</span><span class="stat-label">Asistentes</span></div>
-                                        <div class="mockup-stat"><span class="stat-number">98%</span><span class="stat-label">Check-in</span></div>
-                                        <div class="mockup-stat"><span class="stat-number">124</span><span class="stat-label">Staff</span></div>
+                                        <div class="mockup-stat"><span class="stat-number">2,450</span><span class="stat-label" data-i18n="home.kalirio.stat1">Attendees</span></div>
+                                        <div class="mockup-stat"><span class="stat-number">98%</span><span class="stat-label" data-i18n="home.kalirio.stat2">Check-in</span></div>
+                                        <div class="mockup-stat"><span class="stat-number">124</span><span class="stat-label" data-i18n="home.kalirio.stat3">Staff</span></div>
                                     </div>
                                     <div class="mockup-chart"></div>
                                 </div>
@@ -130,21 +149,21 @@
         <section class="section section-surface">
             <div class="container">
                 <div class="section-header reveal">
-                    <p class="section-tag">Para quién</p>
-                    <h2 class="section-title">Hecho para operación exigente</h2>
+                    <p class="section-tag" data-i18n="kalirio.forWhom.tag">Who it’s for</p>
+                    <h2 class="section-title" data-i18n="kalirio.forWhom.title">Built for demanding operations</h2>
                 </div>
                 <div class="solutions-grid">
                     <article class="solution-item reveal">
-                        <h4>Productoras</h4>
-                        <p>Visibilidad de staff, puertas y aforo en cada sede del festival o tour.</p>
+                        <h4 data-i18n="kalirio.forWhom.p1">Producers</h4>
+                        <p data-i18n="kalirio.forWhom.p1d">Visibility of staff, gates, and capacity at every festival or tour venue.</p>
                     </article>
                     <article class="solution-item reveal reveal-delay-1">
-                        <h4>Venues</h4>
-                        <p>Check-in fluido y reportes listos para cerrar cada función.</p>
+                        <h4 data-i18n="kalirio.forWhom.p2">Venues</h4>
+                        <p data-i18n="kalirio.forWhom.p2d">Smooth check-in and reports ready to close every show.</p>
                     </article>
                     <article class="solution-item reveal reveal-delay-2">
-                        <h4>Marcas &amp; activaciones</h4>
-                        <p>Experiencias medibles sin perder el control operativo del día D.</p>
+                        <h4 data-i18n="kalirio.forWhom.p3">Brands &amp; activations</h4>
+                        <p data-i18n="kalirio.forWhom.p3d">Measurable experiences without losing operational control on the day.</p>
                     </article>
                 </div>
             </div>
@@ -152,9 +171,9 @@
 
         <section class="page-cta-band">
             <div class="container">
-                <h2>¿Listo para operar sin fricción?</h2>
-                <p>Agenda una demo de Kalirio y vemos cómo encaja con tu próximo evento.</p>
-                <a href="../index.html#contacto" class="btn btn-primary">Hablemos</a>
+                <h2 data-i18n="kalirio.cta.title">Ready to operate without friction?</h2>
+                <p data-i18n="kalirio.cta.desc">Book a Kalirio demo and we’ll see how it fits your next event.</p>
+                <a href="../index.html#contacto" class="btn btn-primary" data-i18n="page.ctaTalk">Let’s talk</a>
             </div>
         </section>
     </main>
@@ -172,7 +191,7 @@
                 </div>
                 <div class="footer-links-grid">
                     <div class="footer-col">
-                        <h5>Productos</h5>
+                        <h5 data-i18n="footer.products">Products</h5>
                         <ul>
                             <li><a href="kalirio.html" aria-current="page">Kalirio</a></li>
                             <li><a href="kalenda.html">Kalenda</a></li>
@@ -180,15 +199,15 @@
                         </ul>
                     </div>
                     <div class="footer-col">
-                        <h5>Compañía</h5>
+                        <h5 data-i18n="footer.company">Company</h5>
                         <ul>
-                            <li><a href="../index.html#nosotros">Nosotros</a></li>
-                            <li><a href="../index.html#soluciones">Soluciones</a></li>
-                            <li><a href="../index.html#contacto">Contacto</a></li>
+                            <li><a href="../index.html#nosotros" data-i18n="footer.about">About</a></li>
+                            <li><a href="../index.html#soluciones" data-i18n="footer.solutions">Solutions</a></li>
+                            <li><a href="../index.html#contacto" data-i18n="footer.contact">Contact</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
-                        <h5>Contacto</h5>
+                        <h5 data-i18n="footer.contact">Contact</h5>
                         <ul>
                             <li><a href="mailto:hola@kalimasgroup.net">hola@kalimasgroup.net</a></li>
                             <li><a href="https://kalimasgroup.net">kalimasgroup.net</a></li>
@@ -197,11 +216,12 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Kalimas Group. Todos los derechos reservados.</p>
+                <p data-i18n="footer.rights">&copy; 2026 Kalimas Group. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
+    <script src="../i18n.js"></script>
     <script src="../main.js"></script>
 </body>
 </html>

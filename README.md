@@ -22,6 +22,7 @@ KalimasWeb/
 ├── index.html
 ├── styles.css
 ├── main.js
+├── i18n.js
 ├── favicon.svg
 ├── productos/
 │   ├── kalirio.html
@@ -43,6 +44,12 @@ npx serve
 ```
 
 Visita `http://localhost:8000`.
+
+## Languages
+
+English is the default. Use the **EN / ES** toggle in the navigation (also in the mobile menu). The choice is saved in `localStorage` (`kalimas-lang`) and applies across all pages.
+
+Translations live in `i18n.js`.
 
 ## Formulario de contacto (Formspree)
 
